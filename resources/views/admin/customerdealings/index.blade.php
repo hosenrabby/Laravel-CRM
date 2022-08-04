@@ -8,7 +8,7 @@
           <h3 class="text-center text-success">All Customer Dealings</h3>
           <div class="table-responsive">
 
-            <table id="dataTableExample" class="table">
+            <table id="CRM_DATATABLE" class="table">
               <thead>
                 <tr>
                   <th>Id</th>
