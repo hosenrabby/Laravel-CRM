@@ -52,14 +52,13 @@
                             </div>
                             <div class="mb-3 col">
                                 <label for="lastStatus" class="form-label">Last Status</label>
-                                <select class="form-select" aria-label="Default select example">
+                                <select class="form-select" name="lastStatus"aria-label="Default select example">
                                     <option selected>Select Status</option>
                                     <option value="As Pending">As Pending</option>
                                     <option value=" ON Development">ON Development</option>
                                     <option value="Completed">Completed</option>
                                     <option value="Moved">Moved</option>
                                 </select>
-
                             </div>
                         </div>
 

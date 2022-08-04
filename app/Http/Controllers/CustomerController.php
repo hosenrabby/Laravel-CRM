@@ -63,8 +63,9 @@ class CustomerController extends Controller
      */
     public function edit($id)
     {
-        $input = customer::find($id);
-        return view('admin.customer.edit')->with('customer',$input);
+        $customer = customer::find($id);
+        $input = customer::all();
+        return view('admin.customer.edit' , compact('customer' , 'input'));
     }
 
     /**
@@ -79,7 +80,7 @@ class CustomerController extends Controller
         $customer = customer::find($id);
         $input = $request->all();
         $customer->update($input);
-        return redirect('customer')->with('flash_message', 'Customer Updated!');
+        return redirect('admin/customer')->with('flash_message', 'Customer Updated!');
     }
 
     /**

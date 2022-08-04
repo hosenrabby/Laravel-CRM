@@ -20,7 +20,7 @@
                                         <th>Office Address</th>
                                         <th>Business Type</th>
                                         <th>Last Status</th>
-                                        <th>Action</th>
+                                        <th colspan="3">Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -36,16 +36,19 @@
                                             <td>{{ $item->businessType }}</td>
                                             <td>{{ $item->lastStatus }}</td>
                                             <td>
-                                                <a href="{{ url('admin/customer/' . $item->id) }}"
-                                                    class="btn btn-info">Show</a>
+                                                <a href="{{ url('admin/customer/' . $item->id) }}" class="btn btn-info"><i
+                                                        class="fa-solid fa-magnifying-glass"></i></a>
+
                                                 <a href="{{ url('admin/customer/' . $item->id . '/edit') }}"
-                                                    class="btn btn-success">Edit</a>
+                                                    class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i></a>
+                                            </td>
+                                            <td>
                                                 <form method="post" action="{{ url('admin/customer/' . $item->id) }}">
                                                     {{ method_field('DELETE') }}
                                                     {{ csrf_field() }}
-                                                    <button type="submit" class="btn btn-danger">Delete</button>
+                                                    <button type="submit" class="btn btn-danger"><i
+                                                            class="fa-solid fa-trash-can"></i></button>
                                                 </form>
-
                                             </td>
                                         </tr>
                                     @endforeach
