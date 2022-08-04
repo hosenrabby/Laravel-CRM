@@ -234,10 +234,10 @@
                 </a>
                 <ul class="collapse submenu list-unstyled" id="stuffsAsn" data-bs-parent="#accordionExample">
                     <li>
-                        <a href="{{url('admin/StuffAssignforProject/create')}}"> Assign Stuff </a>
+                        <a href="{{ url('admin/StuffAssignforProject/create') }}"> Assign Stuff </a>
                     </li>
                     <li>
-                        <a href="{{url('admin/StuffAssignforProject')}}"> View Assignable Stuff </a>
+                        <a href="{{ url('admin/StuffAssignforProject') }}"> View Assignable Stuff </a>
                     </li>
                 </ul>
             </li>
@@ -266,10 +266,10 @@
                 </a>
                 <ul class="collapse submenu list-unstyled" id="customer" data-bs-parent="#accordionExample">
                     <li>
-                        <a href="#"> Manage Customer </a>
+                        <a href="manage-customer"> Manage Customer </a>
                     </li>
                     <li>
-                        <a href="{{url('admin/customerdealings')}}"> Dealling Customer </a>
+                        <a href="{{ url('admin/customerdealings') }}"> Dealling Customer </a>
                     </li>
                 </ul>
             </li>
@@ -375,10 +375,10 @@
                 </a>
                 <ul class="collapse submenu list-unstyled" id="stuffTypeM" data-bs-parent="#accordionExample">
                     <li>
-                        <a href="{{url('admin/stuffPaymentMgmt/create')}}"> Add Stuff Payment </a>
+                        <a href="{{ url('admin/stuffPaymentMgmt/create') }}"> Add Stuff Payment </a>
                     </li>
                     <li>
-                        <a href="{{url('admin/stuffPaymentMgmt')}}">View Stuffs Payment</a>
+                        <a href="{{ url('admin/stuffPaymentMgmt') }}">View Stuffs Payment</a>
                     </li>
                 </ul>
             </li>

@@ -24,7 +24,7 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($status as $item)
+                                    @foreach ($manage as $item)
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
                                             <td>{{ $item->customerName }}</td>
@@ -39,7 +39,7 @@
                                                 <a href="{{ url('admin/customer/' . $item->id) }}" class="btn btn-info"><i
                                                         class="fa-solid fa-magnifying-glass"></i></a>
 
-                                                <a href="{{ url('admin/customer/' . $item->id . '/edit') }}"
+                                                <a href="{{ url('admin/manageEditable-customer/' . $item->id) }}"
                                                     class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i></a>
                                             </td>
                                             <td>

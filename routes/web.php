@@ -7,6 +7,7 @@ use App\Http\Controllers\CustomerDeallingController;
 use App\Http\Controllers\StuffAssignforProjectController;
 use App\Http\Controllers\StuffPaymentController;
 use App\Http\Controllers\StuffTypeMngController;
+use App\Http\Controllers\manageCustomerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -36,6 +37,9 @@ Route::group(['prefix' => 'admin' , 'as' => 'admin.'], function (){
     Route::resource('StuffAssignforProject',StuffAssignforProjectController::class);
     Route::resource('stuffPaymentMgmt' , StuffPaymentController::class);
     Route::resource('stuffType',StuffTypeMngController::class);
+    Route::get('manage-customer' , [manageCustomerController::class, 'manageCustomer']);
+    Route::get('manageEditable-customer/{id}' , [manageCustomerController::class, 'customerManageEdit']);
+    Route::patch('managable-customer-update/{id}' , [manageCustomerController::class, 'customerUpdate']);
 
 });
 
