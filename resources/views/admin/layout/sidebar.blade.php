@@ -338,10 +338,10 @@
                 </a>
                 <ul class="collapse submenu list-unstyled" id="cullectM" data-bs-parent="#accordionExample">
                     <li>
-                        <a href="#"> Add Collection </a>
+                        <a href="{{ url('admin/collectionManagement/create') }}"> Add Collection </a>
                     </li>
                     <li>
-                        <a href="#"> View Collection </a>
+                        <a href="{{ url('admin/collectionManagement') }}"> View Collection </a>
                     </li>
                     <li>
                         <a href="#"> Collection Distribution </a>
