@@ -7,7 +7,6 @@
                     <div class="card-body">
                         <h3 class="text-center text-success">All Customer</h3>
                         <div class="table-responsive">
-
                             <table id="CRM_DATATABLE" class="table">
                                 <thead>
                                     <tr>
@@ -20,7 +19,7 @@
                                         <th>Office Address</th>
                                         <th>Business Type</th>
                                         <th>Last Status</th>
-                                        <th colspan="3">Action</th>
+                                        <th>Action</th>
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -41,8 +40,7 @@
 
                                                 <a href="{{ url('admin/customer/' . $item->id . '/edit') }}"
                                                     class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i></a>
-                                            </td>
-                                            <td>
+
                                                 <form method="post" action="{{ url('admin/customer/' . $item->id) }}">
                                                     {{ method_field('DELETE') }}
                                                     {{ csrf_field() }}

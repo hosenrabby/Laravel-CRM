@@ -40,6 +40,7 @@ Route::group(['prefix' => 'admin' , 'as' => 'admin.'], function (){
     Route::get('manage-customer' , [manageCustomerController::class, 'manageCustomer']);
     Route::get('manageEditable-customer/{id}' , [manageCustomerController::class, 'customerManageEdit']);
     Route::patch('managable-customer-update/{id}' , [manageCustomerController::class, 'customerUpdate']);
+    Route::get('manageDelable-customer/{id}' , [manageCustomerController::class, 'destroy']);
 
 });
 

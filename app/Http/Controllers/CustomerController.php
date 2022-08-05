@@ -10,7 +10,9 @@ class CustomerController extends Controller
 {
     public function index()
     {
+        // $status= customer::all();
         $status= customer::where('lastStatus' , 'As Pending')->get();
+        // return view('admin.customer.index')->with('data' , $status);
         return view('admin.customer.index' , compact('status'));
     }
 
@@ -51,6 +53,6 @@ class CustomerController extends Controller
     public function destroy($id)
     {
         customer::destroy($id);
-        return redirect('customer')->with('flash_message', 'customer deleted!');
+        return redirect('admin/customer')->with('flash_message', 'customer deleted!');
     }
 }

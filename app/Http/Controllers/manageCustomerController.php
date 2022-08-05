@@ -31,4 +31,10 @@ class manageCustomerController extends Controller
         $customer->update($input);
         return redirect('admin/manage-customer')->with('flash_message', 'Customer Updated!');
     }
+
+    public function destroy($id){
+        $delData = customer::find($id);
+        $delData->delete();
+        return redirect('admin/manage-customer')->with('flash_message', 'Customer Deleted!');
+    }
 }
