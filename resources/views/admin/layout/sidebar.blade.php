@@ -209,40 +209,6 @@
             </li>
 
             <li class="menu menu-heading">
-                <div class="heading">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="feather feather-minus">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                    </svg>
-                    <span>STUFFS ASSIGN ON PROJECT</span>
-                </div>
-            </li>
-            <li class="menu">
-                <a href="#stuffsAsn" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                    <div class="">
-                        <i class="fa-solid fa-user-tie me-2 ms-1"></i>
-                        <span>Stuff Assign</span>
-                    </div>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="feather feather-chevron-right">
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                    </div>
-                </a>
-                <ul class="collapse submenu list-unstyled" id="stuffsAsn" data-bs-parent="#accordionExample">
-                    <li>
-                        <a href="{{ url('admin/StuffAssignforProject/create') }}"> Assign Stuff </a>
-                    </li>
-                    <li>
-                        <a href="{{ url('admin/StuffAssignforProject') }}"> View Assignable Stuff </a>
-                    </li>
-                </ul>
-            </li>
-
-            <li class="menu menu-heading">
                 <div class="heading"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                         stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus">
@@ -266,7 +232,7 @@
                 </a>
                 <ul class="collapse submenu list-unstyled" id="customer" data-bs-parent="#accordionExample">
                     <li>
-                        <a href="manage-customer"> Manage Customer </a>
+                        <a href="{{ url('admin/manage-customer') }}"> Manage Customer </a>
                     </li>
                     <li>
                         <a href="{{ url('admin/customerdealings') }}"> Dealling Customer </a>
@@ -319,6 +285,40 @@
                         stroke-linejoin="round" class="feather feather-minus">
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                     </svg>
+                    <span>STUFFS ASSIGN ON PROJECT</span>
+                </div>
+            </li>
+            <li class="menu">
+                <a href="#stuffsAsn" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="fa-solid fa-user-tie me-2 ms-1"></i>
+                        <span>Stuff Assign</span>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="feather feather-chevron-right">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="stuffsAsn" data-bs-parent="#accordionExample">
+                    <li>
+                        <a href="{{ url('admin/StuffAssignforProject/create') }}"> Assign Stuff </a>
+                    </li>
+                    <li>
+                        <a href="{{ url('admin/StuffAssignforProject') }}"> View Assignable Stuff </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="menu menu-heading">
+                <div class="heading">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-minus">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
                     <span>COLLECTION MANAGMENT</span>
                 </div>
             </li>
@@ -338,10 +338,10 @@
                 </a>
                 <ul class="collapse submenu list-unstyled" id="cullectM" data-bs-parent="#accordionExample">
                     <li>
-                        <a href="#"> Add Collection </a>
+                        <a href="{{ url('admin/collectionManagement/create') }}"> Add Collection </a>
                     </li>
                     <li>
-                        <a href="#"> View Collection </a>
+                        <a href="{{ url('admin/collectionManagement') }}"> View Collection </a>
                     </li>
                     <li>
                         <a href="#"> Collection Distribution </a>

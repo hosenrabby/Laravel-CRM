@@ -8,6 +8,7 @@ use App\Http\Controllers\StuffAssignforProjectController;
 use App\Http\Controllers\StuffPaymentController;
 use App\Http\Controllers\StuffTypeMngController;
 use App\Http\Controllers\manageCustomerController;
+use App\Http\Controllers\CollectionManagementController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -41,6 +42,8 @@ Route::group(['prefix' => 'admin' , 'as' => 'admin.'], function (){
     Route::get('manageEditable-customer/{id}' , [manageCustomerController::class, 'customerManageEdit']);
     Route::patch('managable-customer-update/{id}' , [manageCustomerController::class, 'customerUpdate']);
     Route::get('manageDelable-customer/{id}' , [manageCustomerController::class, 'destroy']);
+    Route::resource('collectionManagement' , CollectionManagementController::class);
+
 
 });
 

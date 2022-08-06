@@ -13,13 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('customer_deallings', function (Blueprint $table) {
+        Schema::create('collection_management', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('customerId');
-            $table->foreign('customerId')->references('id')->on('customers');
-            $table->string('latestInformation');
-            $table->string('updateDate')->nullable();
-            $table->string('stuffId')->references('id')->on('stuff_management_models');
+            $table->string('projectId');
+            $table->string('customerId');
+            $table->string('collectionAmount');
+            $table->string('collectionDate');
+            $table->string('collectionNote');
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('customer_deallings');
+        Schema::dropIfExists('collection_management');
     }
 };
