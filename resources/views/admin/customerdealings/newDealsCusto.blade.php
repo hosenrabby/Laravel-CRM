@@ -20,7 +20,7 @@
                                 <select class="form-select" name="customerId">
                                     <option selected>Customer Name</option>
                                     @foreach ($custoName as $cName)
-                                        <option value="{{ $cName->id }}">{{ $cName->customerName }}</option>
+                                        <option value="{{ $cName->customerName }}">{{ $cName->customerName }}</option>
                                     @endforeach
                                 </select>
                             </div>
@@ -29,7 +29,7 @@
                                 <select class="form-select" name="stuffId">
                                     <option selected>Stuff Name</option>
                                     @foreach ($stuffName as $sName)
-                                        <option value="{{ $sName->id }}">{{ $sName->stuffName }}</option>
+                                        <option value="{{ $sName->stuffName }}">{{ $sName->stuffName }}</option>
                                     @endforeach
                                 </select>
                             </div>
