@@ -11,8 +11,10 @@ return new class extends Migration
     {
         Schema::create('stuffassignforprojects', function (Blueprint $table) {
             $table->id();
-            $table->string('Projectid');
-            $table->string('Stuffid');
+            $table->unsignedBigInteger('Projectid');
+            $table->foreign('Projectid')->references('id')->on('project_management');
+            $table->unsignedBigInteger('Stuffid');
+            $table->foreign('Stuffid')->references('id')->on('stuff_management_models');;
             $table->string('WorkingCommission');
             $table->timestamps();
         });

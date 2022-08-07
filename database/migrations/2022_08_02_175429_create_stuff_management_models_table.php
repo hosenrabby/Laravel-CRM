@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use phpDocumentor\Reflection\Types\Nullable;
 
 return new class extends Migration
 {
@@ -15,18 +16,19 @@ return new class extends Migration
     {
         Schema::create('stuff_management_models', function (Blueprint $table) {
             $table->id();
-            $table->string('stuffType');
+            $table->integer('stuffTypeId');
             $table->string('stuffName');
-            $table->string('stuffCode');
+            $table->unsignedBigInteger('stuffId');
+            $table->foreign('stuffId')->references('id')->on('stuff_type_mng');
             $table->string('stuffContactNo');
             $table->string('stuffEmailId');
             $table->string('gardianContactNo');
-            $table->string('referanceContactNo');
-            $table->string('stuffPresentAddress');
+            $table->string('referanceContactNo')->nullable();
+            $table->string('stuffPresentAddress')->nullable();
             $table->string('stuffPermanentAddress');
             $table->string('nidImageUrl');
-            $table->string('logInid');
-            $table->string('password');
+            $table->string('logInid')->nullable();
+            $table->string('password')->nullable();
             $table->timestamps();
         });
     }

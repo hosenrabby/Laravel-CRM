@@ -11,9 +11,9 @@ class stuffManagementModel extends Model
     protected $table = 'stuff_management_models';
     protected $primaryKey ='id';
     protected $fillable=[
-        'stuffType',
+        'stuffTypeId',
         'stuffName',
-        'stuffCode',
+        'stuffId',
         'stuffContactNo',
         'stuffEmailId',
         'gardianContactNo',

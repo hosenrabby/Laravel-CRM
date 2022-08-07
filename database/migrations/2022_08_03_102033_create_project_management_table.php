@@ -18,7 +18,7 @@ return new class extends Migration
             $table->string('projectName');
             $table->string('projectDuration');
             $table->string('projectFeature');
-            $table->string('projectAmount');
+            $table->decimal('projectAmount', 10, 2);
             $table->string('StartDate');
             $table->string('EndDate');
             $table->string('projectDeliveryDate');

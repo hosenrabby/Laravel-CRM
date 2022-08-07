@@ -132,83 +132,6 @@
             </li>
 
             <li class="menu menu-heading">
-                <div class="heading">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="feather feather-minus">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                    </svg>
-                    <span>STUFFS TYPE MANAGMENT</span>
-                </div>
-            </li>
-            <li class="menu">
-                <a href="#stuffType" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                    <div class="">
-                        <i class="fa-solid fa-user-tie me-2 ms-1"></i>
-                        <span>Stuff Type Managment</span>
-                    </div>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="feather feather-chevron-right">
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                    </div>
-                </a>
-                <ul class="collapse submenu list-unstyled" id="stuffType" data-bs-parent="#accordionExample">
-                    <li>
-                        <a href="{{ url('admin/stuffType/create') }}"> Add Stuff Type</a>
-                    </li>
-                    <li>
-                        <a href="{{ url('admin/stuffType') }}"> Stuff Types</a>
-                    </li>
-                </ul>
-            </li>
-
-            <li class="menu menu-heading">
-                <div class="heading">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round" class="feather feather-minus">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                    </svg>
-                    <span>STUFFS MANAGMENT</span>
-                </div>
-            </li>
-            <li class="menu">
-                <a href="#stuffs" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
-                    <div class="">
-                        <i class="fa-solid fa-user-tie me-2 ms-1"></i>
-                        <span>Stuff Managment</span>
-                    </div>
-                    <div>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                            stroke-linejoin="round" class="feather feather-chevron-right">
-                            <polyline points="9 18 15 12 9 6"></polyline>
-                        </svg>
-                    </div>
-                </a>
-                <ul class="collapse submenu list-unstyled" id="stuffs" data-bs-parent="#accordionExample">
-                    <li>
-                        <a href="{{ url('admin/stuffManagement') }}"> All Stuff </a>
-                    </li>
-                    <li>
-                        <a href="{{ url('admin/stuffManagement/create') }}"> Add Stuff </a>
-                    </li>
-                    <li>
-                        <a href="./app-invoice-add.html"> Stuff Type </a>
-                    </li>
-                    <li>
-                        <a href="./app-invoice-edit.html"> Management </a>
-                    </li>
-                    <li>
-                        <a href="./app-invoice-edit.html"> Stuff Payment </a>
-                    </li>
-                </ul>
-            </li>
-
-            <li class="menu menu-heading">
                 <div class="heading"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"
                         viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                         stroke-linecap="round" stroke-linejoin="round" class="feather feather-minus">
@@ -285,6 +208,86 @@
                         stroke-linejoin="round" class="feather feather-minus">
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                     </svg>
+                    <span>COLLECTION MANAGMENT</span>
+                </div>
+            </li>
+            <li class="menu">
+                <a href="#cullectM" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="fa-solid fa-list-check me-2 ms-1"></i>
+                        <span>Collection Managment</span>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="feather feather-chevron-right">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="cullectM" data-bs-parent="#accordionExample">
+                    <li>
+                        <a href="{{ url('admin/collectionManagement/create') }}"> Add Collection </a>
+                    </li>
+                    <li>
+                        <a href="{{ url('admin/collectionManagement') }}"> View Collection </a>
+                    </li>
+                    <li>
+                        <a href="#"> Collection Distribution </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="menu menu-heading">
+                <div class="heading">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-minus">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
+                    <span>STUFFS MANAGMENT</span>
+                </div>
+            </li>
+            <li class="menu">
+                <a href="#stuffs" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                    <div class="">
+                        <i class="fa-solid fa-user-tie me-2 ms-1"></i>
+                        <span>Stuff Managment</span>
+                    </div>
+                    <div>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                            stroke-linejoin="round" class="feather feather-chevron-right">
+                            <polyline points="9 18 15 12 9 6"></polyline>
+                        </svg>
+                    </div>
+                </a>
+                <ul class="collapse submenu list-unstyled" id="stuffs" data-bs-parent="#accordionExample">
+                    <li>
+                        <a href="{{ url('admin/stuffManagement') }}"> All Stuff </a>
+                    </li>
+                    <li>
+                        <a href="{{ url('admin/stuffManagement/create') }}"> Add Stuff </a>
+                    </li>
+                    <li>
+                        <a href="./app-invoice-add.html"> Stuff Type </a>
+                    </li>
+                    <li>
+                        <a href="./app-invoice-edit.html"> Management </a>
+                    </li>
+                    <li>
+                        <a href="./app-invoice-edit.html"> Stuff Payment </a>
+                    </li>
+                </ul>
+            </li>
+
+            <li class="menu menu-heading">
+                <div class="heading">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
+                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                        stroke-linejoin="round" class="feather feather-minus">
+                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                    </svg>
                     <span>STUFFS ASSIGN ON PROJECT</span>
                 </div>
             </li>
@@ -319,14 +322,14 @@
                         stroke-linejoin="round" class="feather feather-minus">
                         <line x1="5" y1="12" x2="19" y2="12"></line>
                     </svg>
-                    <span>COLLECTION MANAGMENT</span>
+                    <span>STUFFS TYPE MANAGMENT</span>
                 </div>
             </li>
             <li class="menu">
-                <a href="#cullectM" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
+                <a href="#stuffType" data-bs-toggle="collapse" aria-expanded="false" class="dropdown-toggle">
                     <div class="">
-                        <i class="fa-solid fa-list-check me-2 ms-1"></i>
-                        <span>Collection Managment</span>
+                        <i class="fa-solid fa-user-tie me-2 ms-1"></i>
+                        <span>Stuff Type Managment</span>
                     </div>
                     <div>
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
@@ -336,15 +339,12 @@
                         </svg>
                     </div>
                 </a>
-                <ul class="collapse submenu list-unstyled" id="cullectM" data-bs-parent="#accordionExample">
+                <ul class="collapse submenu list-unstyled" id="stuffType" data-bs-parent="#accordionExample">
                     <li>
-                        <a href="{{ url('admin/collectionManagement/create') }}"> Add Collection </a>
+                        <a href="{{ url('admin/stuffType/create') }}"> Add Stuff Type</a>
                     </li>
                     <li>
-                        <a href="{{ url('admin/collectionManagement') }}"> View Collection </a>
-                    </li>
-                    <li>
-                        <a href="#"> Collection Distribution </a>
+                        <a href="{{ url('admin/stuffType') }}"> Stuff Types</a>
                     </li>
                 </ul>
             </li>

@@ -18,8 +18,8 @@ return new class extends Migration
             $table->unsignedBigInteger('customerId');
             $table->foreign('customerId')->references('id')->on('customers');
             $table->string('latestInformation');
-            $table->string('updateDate')->nullable();
-            $table->string('stuffId')->references('id')->on('stuff_management_models');
+            $table->unsignedBigInteger('stuffId');
+            $table->foreign('stuffId')->references('id')->on('stuff_management_models');
             $table->timestamps();
         });
     }

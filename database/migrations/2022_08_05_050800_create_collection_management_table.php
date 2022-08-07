@@ -15,9 +15,11 @@ return new class extends Migration
     {
         Schema::create('collection_management', function (Blueprint $table) {
             $table->id();
-            $table->string('projectId');
-            $table->string('customerId');
-            $table->string('collectionAmount');
+            $table->unsignedBigInteger('projectId');
+            $table->foreign('projectId')->references('id')->on('project_management');
+            $table->unsignedBigInteger('customerId');
+            $table->foreign('customerId')->references('id')->on('customers');
+            $table->decimal('collectionAmount',7,2);
             $table->string('collectionDate');
             $table->string('collectionNote');
             $table->timestamps();
