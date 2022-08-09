@@ -16,19 +16,25 @@
                         <div class="row ms-2 me-2">
                             <div class="mb-3 col">
                                 <label for="stuffType" class="form-label">Stuff Type</label>
-                                <input type="text" class="form-control" name="stuffType" placeholder="Stuff Type">
+                                <select class="form-select" name="stuffType"aria-label="Default select example">
+                                    <option selected value="">Select Stuff Type</option>
+                                    <option  value="Front Desk">Front Desk</option>
+                                    <option value="Grafics Designer">Grafics Designer</option>
+                                    <option value="UI/UX Designer">UI/UX Designer</option>
+                                    <option value="Marketing Menager">Marketing Manager</option>
+                                    <option value="Project Menager">Project Manager</option>
+                                    <option value="Frontend Developer">Frontend Developer</option>
+                                    <option value="Junior Developer">Junior Developer</option>
+                                    <option value="Senior Developer">Senior Developer</option>
+                                </select>
                             </div>
-                            <div class="mb-3 col">
-                                <label for="stuffTypeCode" class="form-label">Stuff Type Code</label>
-                                <input type="text" class="form-control" name="stuffTypeCode" placeholder="Stuff Type Code">
-                            </div>
-                        </div>
-
-                        <div class="row ms-2 me-2">
                             <div class="mb-3 col">
                                 <label for="basicSalary" class="form-label">Basic Salary</label>
                                 <input type="number" class="form-control" name="basicSalary" placeholder="Basic Salary ">
                             </div>
+                        </div>
+
+                        <div class="row ms-2 me-2">
                             <div class="mb-3 col">
                                 <label for="workingCommission" class="form-label">Working Commission</label>
                                 <input type="text" class="form-control" name="workingCommission" placeholder="Working Commission">

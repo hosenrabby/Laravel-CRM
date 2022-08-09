@@ -16,7 +16,7 @@ return new class extends Migration
         Schema::create('stuff_type_mng', function (Blueprint $table) {
             $table->id();
             $table->string('stuffType');
-            $table->string('basicSalary');
+            $table->decimal('basicSalary',7,2);
             $table->string('workingCommission');
             $table->timestamps();
         });

@@ -19,9 +19,9 @@
                         <p class="card-text">Referance Contact No: {{ $stuffshow->referanceContactNo}}</p>
                         <p class="card-text">Stuff Present Address: {{ $stuffshow->stuffPresentAddress}}</p>
                         <p class="card-text">Stuff Permanent Address: {{ $stuffshow->stuffPermanentAddress}}</p>
-                        <p class="card-text">Nid Image Url: {{ $stuffshow->nidImageUrl}}</p>
                         <p class="card-text">Log In id: {{ $stuffshow->logInid}}</p>
                         <p class="card-text">Password: {{ $stuffshow->password}}</p>
+                        <p class="card-text">Nid Image Url: {{ $stuffshow->nidImageUrl}}</p>
                       </div>
                 </div>
             </div>

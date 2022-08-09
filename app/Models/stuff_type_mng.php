@@ -12,7 +12,6 @@ class stuff_type_mng extends Model
     protected $primaryKey ='id';
     protected $fillable=[
         'stuffType',
-        'stuffTypeCode',
         'basicSalary',
         'workingCommission'];
 }

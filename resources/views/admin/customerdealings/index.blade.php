@@ -12,25 +12,24 @@
                                 <thead>
                                     <tr>
                                         <th>Id</th>
-                                        <th>Customer Id</th>
-                                        <th>Stuff Id</th>
+                                        <th>Customer Name</th>
+                                        <th>Stuff Name</th>
                                         <th>Latest Information</th>
                                         <th>Update Date</th>
                                         <th>Actions</th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    @foreach ($custdealings as $item)
+                                    @foreach ($custoDealData as $item)
                                         <tr>
                                             <td>{{ $loop->iteration }}</td>
-                                            <td>{{ $item->customerId }}</td>
-                                            <td>{{ $item->stuffId }}</td>
+                                            <td>{{ $item->customerName }}</td>
+                                            <td>{{ $item->stuffName }}</td>
                                             <td>{{ $item->latestInformation }}</td>
                                             <td>{{ $item->created_at }}</td>
                                             <td>
-                                                <a href="{{ url('admin/customer/' . $item->id) }}"
-                                                    class="btn btn-info btn-sm"><i
-                                                        class="fa-solid fa-magnifying-glass"></i></a>
+                                                <a href="{{ url('admin/customerdealings/' . $item->id.'/edit') }}"
+                                                    class="btn btn-info btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
 
                                                 <form method="post" action="{{ url('admin/customer/' . $item->id) }}">
                                                     {{ method_field('DELETE') }}

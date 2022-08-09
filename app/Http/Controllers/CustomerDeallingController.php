@@ -2,18 +2,24 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\customer_dealling;
 use App\Models\customer;
+use App\Models\customer_dealling;
 use App\Models\stuffManagementModel;
-use App\Http\Controllers\Controller;
+
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
 
 class CustomerDeallingController extends Controller
 {
     public function index()
     {
-        $data = customer_dealling::all();
-        return view('admin.customerdealings.index')->with('custdealings', $data);
+        // $data = customer_dealling::all();
+        $custoDealData = DB::table('customer_deallings')
+        ->leftJoin('customers' , 'customers.id' , '=' , 'customer_deallings.customerId')
+        ->leftJoin('stuff_management_models' , 'stuff_management_models.id' , '=' , 'customer_deallings.stuffId')
+        ->get();
+        return view('admin.customerdealings.index', compact('custoDealData'));
     }
 
     public function create()
@@ -41,9 +47,12 @@ class CustomerDeallingController extends Controller
      * @param  \App\Models\customer_dealling  $customer_dealling
      * @return \Illuminate\Http\Response
      */
-    public function edit(customer_dealling $customer_dealling)
+    public function edit(Request $request , $id)
     {
-        //
+        $dealCusto = customer_dealling::find($id);
+        $custoName = customer::all();
+        $stuffName = stuffManagementModel::all();
+        return view('admin.customerdealings.dealEdit' , compact('dealCusto','custoName','stuffName'));
     }
 
     /**
@@ -53,9 +62,11 @@ class CustomerDeallingController extends Controller
      * @param  \App\Models\customer_dealling  $customer_dealling
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, customer_dealling $customer_dealling)
+    public function update(Request $request)
     {
-        //
+        $input = $request->all();
+        customer_dealling::create($input);
+        return redirect('admin/customerdealings')->with('flash_message' , 'New Schidule set..');
     }
 
     /**

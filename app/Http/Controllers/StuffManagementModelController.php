@@ -2,27 +2,30 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\stuffManagementModel;
-use App\Http\Controllers\Controller;
-use App\Http\Requests\stuffRequest;
 use Illuminate\Http\Request;
+use App\Models\stuff_type_mng;
+use Illuminate\Support\Facades\DB;
+use App\Http\Requests\stuffRequest;
+use App\Http\Controllers\Controller;
+use App\Models\stuffManagementModel;
 
 class StuffManagementModelController extends Controller
 {
 
     public function index()
     {
-        $stuff=stuffManagementModel::all();
-        // return view('admin.stuffManagement.stuffIndex')->with('stuffs', $stuff);
-        return view('admin.stuffManagement.stuffIndex')->with('stuffs', $stuff);
+        $stufType = DB::table('stuff_management_models')
+        ->leftJoin('stuff_type_mng' , 'stuff_type_mng.id' , '=' , 'stuff_management_models.stuffTypeId')->get();
+        return view('admin.stuffManagement.stuffIndex', compact('stufType'));
     }
 
     public function create()
     {
-        return view('admin.stuffManagement.stuffCreate');
+        $stuffType = stuff_type_mng::all();
+        return view('admin.stuffManagement.stuffCreate', compact('stuffType'));
     }
 
-    public function store(stuffRequest $request)
+    public function store(Request $request)
     {
         $input=$request->all();
         stuffManagementModel::create($input);

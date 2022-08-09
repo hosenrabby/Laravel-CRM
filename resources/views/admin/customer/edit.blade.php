@@ -62,11 +62,12 @@
                             <div class="mb-3 col">
                                 <label for="lastStatus" class="form-label">Last Status</label>
                                 <select class="form-select" name="lastStatus"aria-label="Default select example">
-                                    @foreach ($input as $custStatus)
+                                    {{-- @foreach ($input as $custStatus)
                                         <option value="{{ $custStatus->lastStatus }}"
                                             @if ($custStatus->lastStatus == $customer->lastStatus) selected @endif>{{ $custStatus->lastStatus }}
                                         </option>
-                                    @endforeach
+                                    @endforeach --}}
+                                    <option value="As Pending">select status</option>
                                     <option value="As Pending">As Pending</option>
                                     <option value=" ON Development">ON Development</option>
                                     <option value="Completed">Completed</option>

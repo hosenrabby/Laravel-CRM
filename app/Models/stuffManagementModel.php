@@ -13,15 +13,14 @@ class stuffManagementModel extends Model
     protected $fillable=[
         'stuffTypeId',
         'stuffName',
-        'stuffId',
         'stuffContactNo',
         'stuffEmailId',
         'gardianContactNo',
         'referanceContactNo',
         'stuffPresentAddress',
         'stuffPermanentAddress',
-        'nidImageUrl',
         'logInid',
-        'password'
+        'password',
+        'nidImageUrl'
     ];
 }

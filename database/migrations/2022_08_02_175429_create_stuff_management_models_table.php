@@ -16,19 +16,18 @@ return new class extends Migration
     {
         Schema::create('stuff_management_models', function (Blueprint $table) {
             $table->id();
-            $table->integer('stuffTypeId');
+            $table->unsignedBigInteger('stuffTypeId');
+            $table->foreign('stuffTypeId')->references('id')->on('stuff_type_mng');
             $table->string('stuffName');
-            $table->unsignedBigInteger('stuffId');
-            $table->foreign('stuffId')->references('id')->on('stuff_type_mng');
             $table->string('stuffContactNo');
             $table->string('stuffEmailId');
             $table->string('gardianContactNo');
             $table->string('referanceContactNo')->nullable();
             $table->string('stuffPresentAddress')->nullable();
             $table->string('stuffPermanentAddress');
-            $table->string('nidImageUrl');
             $table->string('logInid')->nullable();
             $table->string('password')->nullable();
+            $table->string('nidImageUrl');
             $table->timestamps();
         });
     }

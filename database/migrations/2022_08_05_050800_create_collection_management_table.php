@@ -19,7 +19,7 @@ return new class extends Migration
             $table->foreign('projectId')->references('id')->on('project_management');
             $table->unsignedBigInteger('customerId');
             $table->foreign('customerId')->references('id')->on('customers');
-            $table->decimal('collectionAmount',7,2);
+            $table->decimal('collectionAmount',9,2);
             $table->string('collectionDate');
             $table->string('collectionNote');
             $table->timestamps();

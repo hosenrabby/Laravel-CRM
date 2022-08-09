@@ -19,35 +19,33 @@
                                     <th>Sl No</th>
                                     <th>Stuff Type</th>
                                     <th>Stuff Name</th>
-                                    <th>Stuff Code</th>
                                     <th>Stuff Contact No</th>
                                     <th>Stuff Email Id</th>
                                     <th>Gardian Contact No</th>
                                     <th>Referrence Contact No</th>
                                     <th>Stuff Present Address</th>
                                     <th>Stuff Permanent Adress</th>
-                                    <th>Nid Image</th>
                                     <th>Log In ID</th>
                                     <th>Password</th>
+                                    <th>Nid Image</th>
                                     <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                @foreach ($stuffs as $item)
+                                @foreach ($stufType as $item)
                                     <tr>
                                         <td>{{ $loop->iteration }}</td>
                                         <td>{{ $item->stuffType }}</td>
                                         <td>{{ $item->stuffName }}</td>
-                                        <td>{{ $item->stuffCode }}</td>
                                         <td>{{ $item->stuffContactNo }}</td>
                                         <td>{{ $item->stuffEmailId }}</td>
                                         <td>{{ $item->gardianContactNo }}</td>
                                         <td>{{ $item->referanceContactNo }}</td>
                                         <td>{{ $item->stuffPresentAddress }}</td>
                                         <td>{{ $item->stuffPermanentAddress }}</td>
-                                        <td>{{ $item->nidImageUrl }}</td>
                                         <td>{{ $item->logInid }}</td>
                                         <td>{{ $item->password }}</td>
+                                        <td>{{ $item->nidImageUrl }}</td>
                                         <td>
                                             <a href="{{ url('admin/stuffManagement/' . $item->id . '/edit') }}"
                                                 class="btn btn-primary btn-sm" title="Edit Stuff" aria-hidden="true"><i

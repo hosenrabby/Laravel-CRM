@@ -16,8 +16,13 @@
                         {!! csrf_field() !!}
                         <div class="row ms-2 me-2">
                             <div class="mb-3 col">
-                                <label for="stuffType" class="form-label">Stuff Type</label>
-                                <input type="text" class="form-control" name="stuffType" placeholder="Stuff Type">
+                                <label for="stuffTypeId" class="form-label">Stuff Type</label>
+                                <select class="form-select" name="stuffTypeId">
+                                    <option selected>Select Stuff</option>
+                                    @foreach ($stuffType as $stuff)
+                                        <option value="{{ $stuff->id }}">{{ $stuff->stuffType }}</option>
+                                    @endforeach
+                                </select>
                             </div>
                             <div class="mb-3 col">
                                 <label for="stuffName" class="form-label">Stuff Name</label>
@@ -26,8 +31,8 @@
                         </div>
                         <div class="row ms-2 me-2">
                             <div class="mb-3 col">
-                                <label for="stuffCode" class="form-label">Stuff Code</label>
-                                <input type="text" class="form-control" name="stuffCode" placeholder="Stuff Code">
+                                <label for="stuffEmailId" class="form-label">Stuff Email Id</label>
+                                <input type="email" class="form-control" name="stuffEmailId" placeholder="Stuff Email">
                             </div>
                             <div class="mb-3 col">
                                 <label for="stuffContactNo" class="form-label">Stuff Contact No</label>
@@ -37,33 +42,29 @@
                         </div>
                         <div class="row ms-2 me-2">
                             <div class="mb-3 col">
-                                <label for="stuffEmailId" class="form-label">Stuff Email Id</label>
-                                <input type="email" class="form-control" name="stuffEmailId" placeholder="Stuff Email">
-                            </div>
-                            <div class="mb-3 col">
                                 <label for="gardianContactNo" class="form-label">Gardian Contact No</label>
                                 <input type="number" class="form-control" name="gardianContactNo"
                                     placeholder="Gardian Contact No">
                             </div>
-                        </div>
-                        <div class="row ms-2 me-2">
                             <div class="mb-3 col">
                                 <label for="referreceContactNo" class="form-label">Referrence Contact No</label>
                                 <input type="number" class="form-control" name="referanceContactNo"
                                     placeholder="Referrence Contact No">
                             </div>
+                        </div>
+                        <div class="row ms-2 me-2">
                             <div class="mb-3 col">
                                 <label for="stuffPresentAddress" class="form-label">Stuff Present Address</label>
                                 <input type="text" class="form-control" name="stuffPresentAddress"
                                     placeholder="Stuff Present Address">
                             </div>
-                        </div>
-                        <div class="row ms-2 me-2">
                             <div class="mb-3 col">
                                 <label for="stuffPermanentAdress" class="form-label">Stuff Permanent Adress</label>
                                 <input type="text" class="form-control" name="stuffPermanentAddress"
                                     placeholder="Stuff Permanent Address">
                             </div>
+                        </div>
+                        <div class="row ms-2 me-2">
                             <div class="mb-3 col">
                                 <label for="logInid" class="form-label">Log In Id</label>
                                 <input type="text" name="logInid" id="logInid" class="form-control">

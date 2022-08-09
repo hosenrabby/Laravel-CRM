@@ -55,10 +55,7 @@
                             <input type="text" name="stuffPermanentAddress" id="stuffPermanentAddress" class="form-control @error('stuffPermanentAddress')
                             is-invalid
                             @enderror" value="{{$stuffedit->stuffPermanentAddress}}"><br>
-                            <label class="control-label">nidImageUrl</label><br>
-                            <input type="text" name="nidImageUrl" id="nidImageUrl" class="form-control @error('nidImageUrl')
-                            is-invalid
-                            @enderror" value="{{$stuffedit->nidImageUrl}}"><br>
+
                             <label class="control-label">logInid</label><br>
                             <input type="text" name="logInid" id="logInid" class="form-control @error('logInid')
                             is-invalid
@@ -67,8 +64,13 @@
                             <input type="text" name="password" id="password" class="form-control @error('password')
                             is-invalid
                             @enderror" value="{{$stuffedit->password}}"><br>
+                            <label class="control-label">nidImageUrl</label><br>
+                            <input type="text" name="nidImageUrl" id="nidImageUrl" class="form-control @error('nidImageUrl')
+                            is-invalid
+                            @enderror" value="{{$stuffedit->nidImageUrl}}"><br>
                             <input type="submit" value="save" class="btn btn-success">
                             <a href="{{ url('admin/stuffManagement') }}" class="btn btn-danger btn-small" >Cancel</a>
+
                         </form>
                       </div>
                 </div>
