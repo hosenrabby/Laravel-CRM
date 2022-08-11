@@ -1,4 +1,4 @@
-@extends('admin.layout.master')
+@extends('layout.master')
 @section('content')
     <div class="container mt-5">
         <div class="row">
@@ -29,16 +29,15 @@
 
 
                                             <td>
-                                                <a href="{{ url('admin/stuffType/' . $item->id) }}"
-                                                    class="btn btn-info"><i
-                                                    class="fa-solid fa-magnifying-glass"></i></a>
+                                                <a href="{{ url('admin/stuffType/' . $item->id) }}" class="btn btn-info"><i
+                                                        class="fa-solid fa-magnifying-glass"></i></a>
                                                 <a href="{{ url('admin/stuffType/' . $item->id . '/edit') }}"
                                                     class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i></a>
                                                 <form method="post" action="{{ url('admin/stuffType/' . $item->id) }}">
                                                     {{ method_field('DELETE') }}
                                                     {{ csrf_field() }}
                                                     <button type="submit" class="btn btn-danger"><i
-                                                        class="fa-solid fa-trash-can"></i></button>
+                                                            class="fa-solid fa-trash-can"></i></button>
                                                 </form>
 
                                             </td>

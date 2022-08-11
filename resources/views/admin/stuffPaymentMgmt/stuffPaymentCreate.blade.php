@@ -1,4 +1,4 @@
-@extends('admin.layout.master')
+@extends('layout.master')
 @section('content')
     <div class="container mt-5">
         <div class="col-lg-12 col-12  layout-spacing">
@@ -21,7 +21,8 @@
                             </div>
                             <div class="mb-3 col">
                                 <label for="paymentAmount" class="form-label">Payment Amount</label>
-                                <input type="text" class="form-control" name="paymentAmount" placeholder="Payment Amount">
+                                <input type="text" class="form-control" name="paymentAmount"
+                                    placeholder="Payment Amount">
                             </div>
                         </div>
                         <div class="row ms-2 me-2">

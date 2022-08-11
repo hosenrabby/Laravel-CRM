@@ -1,4 +1,4 @@
-@extends('admin.layout.master')
+@extends('layout.master')
 @section('content')
     <div class="container mt-5">
         <div class="col-lg-12 col-12  layout-spacing">
@@ -18,7 +18,7 @@
                                 <label for="stuffType" class="form-label">Stuff Type</label>
                                 <select class="form-select" name="stuffType"aria-label="Default select example">
                                     <option selected value="">Select Stuff Type</option>
-                                    <option  value="Front Desk">Front Desk</option>
+                                    <option value="Front Desk">Front Desk</option>
                                     <option value="Grafics Designer">Grafics Designer</option>
                                     <option value="UI/UX Designer">UI/UX Designer</option>
                                     <option value="Marketing Menager">Marketing Manager</option>
@@ -37,7 +37,8 @@
                         <div class="row ms-2 me-2">
                             <div class="mb-3 col">
                                 <label for="workingCommission" class="form-label">Working Commission</label>
-                                <input type="text" class="form-control" name="workingCommission" placeholder="Working Commission">
+                                <input type="text" class="form-control" name="workingCommission"
+                                    placeholder="Working Commission">
                             </div>
                         </div>
 

@@ -1,4 +1,4 @@
-@extends('admin.layout.master')
+@extends('layout.master')
 @section('content')
     <div class="container mt-5">
         <div class="col-lg-12 col-12  layout-spacing">
@@ -27,15 +27,18 @@
                         <div class="row ms-2 me-2">
                             <div class="mb-3 col">
                                 <label for="collectionAmount" class="form-label">Collection Amount</label>
-                                <input type="number" class="form-control" name="collectionAmount" placeholder="Collection Amount">
+                                <input type="number" class="form-control" name="collectionAmount"
+                                    placeholder="Collection Amount">
                             </div>
                             <div class="mb-3 col">
                                 <label for="collectionDate" class="form-label">Collection Date</label>
-                                <input type="date" class="form-control" name="collectionDate" placeholder="collectionDate">
+                                <input type="date" class="form-control" name="collectionDate"
+                                    placeholder="collectionDate">
                             </div>
                             <div class="mb-3 col">
                                 <label for="collectionNote" class="form-label">Collection Note</label>
-                                <input type="text" class="form-control" name="collectionNote" placeholder="collectionNote">
+                                <input type="text" class="form-control" name="collectionNote"
+                                    placeholder="collectionNote">
                             </div>
                         </div>
                         <div class="form-check mb-3">

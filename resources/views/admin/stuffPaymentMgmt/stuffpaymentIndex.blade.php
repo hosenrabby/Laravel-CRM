@@ -1,4 +1,4 @@
-@extends('admin.layout.master')
+@extends('layout.master')
 @section('content')
     <div class=" container mt-5">
         <div class="col-md-12 grid-margin stretch-card">
@@ -43,7 +43,8 @@
                                                 accept-charset="UTF-8" style="display:inline">
                                                 {{ method_field('DELETE') }}
                                                 {{ csrf_field() }}
-                                                <button type="submit" class="btn btn-danger btn-sm" title="Delete Stuff Payment"
+                                                <button type="submit" class="btn btn-danger btn-sm"
+                                                    title="Delete Stuff Payment"
                                                     onclick="return confirm('Are you Confirm to delete this data?')"><i
                                                         class="fa fa-trash" aria-hidden="true"></i></button>
                                             </form>

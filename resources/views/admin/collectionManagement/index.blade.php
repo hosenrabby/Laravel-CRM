@@ -1,4 +1,4 @@
-@extends('admin.layout.master')
+@extends('layout.master')
 @section('content')
     <div class="container mt-5">
         <div class="row">
@@ -34,7 +34,8 @@
                                                     class="btn btn-info">Show</a>
                                                 <a href="{{ url('admin/collectionManagement/' . $item->id . '/edit') }}"
                                                     class="btn btn-success">Edit</a>
-                                                <form method="post" action="{{ url('admin/collectionManagement/' . $item->id) }}">
+                                                <form method="post"
+                                                    action="{{ url('admin/collectionManagement/' . $item->id) }}">
                                                     {{ method_field('DELETE') }}
                                                     {{ csrf_field() }}
                                                     <button type="submit" class="btn btn-danger">Delete</button>

@@ -1,4 +1,4 @@
-@extends('admin.layout.master')
+@extends('layout.master')
 @section('content')
     <div class="container mt-5">
         <div class="row">
@@ -28,8 +28,9 @@
                                             <td>{{ $item->latestInformation }}</td>
                                             <td>{{ $item->created_at }}</td>
                                             <td>
-                                                <a href="{{ url('admin/customerdealings/' . $item->id.'/edit') }}"
-                                                    class="btn btn-info btn-sm"><i class="fa-solid fa-pen-to-square"></i></a>
+                                                <a href="{{ url('admin/customerdealings/' . $item->id . '/edit') }}"
+                                                    class="btn btn-info btn-sm"><i
+                                                        class="fa-solid fa-pen-to-square"></i></a>
 
                                                 <form method="post" action="{{ url('admin/customer/' . $item->id) }}">
                                                     {{ method_field('DELETE') }}
