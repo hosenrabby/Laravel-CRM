@@ -21,7 +21,7 @@
                             </div>
                             <div class="mb-3 col">
                                 <label for="paymentAmount" class="form-label">Payment Amount</label>
-                                <input type="text" class="form-control" name="paymentAmount"
+                                <input type="number" class="form-control" name="paymentAmount"
                                     placeholder="Payment Amount">
                             </div>
                         </div>

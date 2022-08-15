@@ -1,9 +1,11 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Models\StuffAssignforProject;
+use App\Models\projectManagement;
+use App\Models\stuffManagementModel;
 use App\Http\Controllers\Controller;
+use Illuminate\Support\Facades\DB;
+
 use Illuminate\Http\Request;
 
 class StuffAssignforProjectController extends Controller
@@ -11,13 +13,17 @@ class StuffAssignforProjectController extends Controller
     
     public function index()
     {
-        $data =(new StuffAssignforProject())->all();
-        return view('admin.StuffAssignforProject.index')->with('collection', $data);
+        $stufAssign = DB::table('project_management')
+        ->leftJoin('projectManagement' , 'projectManagement.id' , '=' , 'StuffAssignforProject.projectName')
+        ->leftJoin('stuffManagementModel', 'stuffManagementModel.id', '=', 'StuffAssignforProject.stuffName')->get();
+        return view('admin.StuffAssignforProject.index', compact('stufAssign'));
     }
 
     public function create()
     {
-        return view('admin.StuffAssignforProject.create');
+        $stufAssign = projectManagement::all();
+        $stuffAssign=stuffManagementModel::all();
+        return view('admin.StuffAssignforProject.create', compact('stufAssign', 'stuffAssign'));
     }
 
     

@@ -16,12 +16,22 @@
                         {!! csrf_field() !!}
                         <div class="row ms-2 me-2">
                             <div class="mb-3 col">
-                                <label for="Projectid" class="form-label">Project ID</label>
-                                <input type="text/number" class="form-control" name="Projectid" placeholder="Project ID">
+                                <label for="Projectid" class="form-label">Project Name</label>
+                                <select class="form-select" name="stuffTypeId">
+                                    <option selected>Select Stuff</option>
+                                    @foreach ($stufAssign as $item)
+                                        <option value="{{ $item->id }}">{{ $item->projectName }}</option>
+                                    @endforeach
+                                </select>
                             </div>
                             <div class="mb-3 col">
-                                <label for="Stuffid" class="form-label">Stuff ID</label>
-                                <input type="text" class="form-control" name="Stuffid" placeholder="Stuff ID">
+                                <label for="Stuffid" class="form-label">Stuff Name</label>
+                                <select class="form-select" name="Stuffid">
+                                    <option selected>Select Stuff</option>
+                                    @foreach ($stuffAssign as $item)
+                                        <option value="{{ $item->id }}">{{ $item->stuffName }}</option>
+                                    @endforeach
+                                </select>
                             </div>
                         </div>
                         <div class="row ms-2 me-2">
