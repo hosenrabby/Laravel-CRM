@@ -10,7 +10,7 @@
                 </div>
             </div>
             <div class="widget-content widget-content-area">
-                <form class="forms-sample" action="{{ url('admin/collectionManagement/' . $collectionManage->id) }}"
+                <form class="forms-sample" action="{{ url('authorized/collectionManagement/' . $collectionManage->id) }}"
                     method="POST">
                     {!! csrf_field() !!}
                     @method('PATCH')

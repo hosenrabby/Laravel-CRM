@@ -5,7 +5,12 @@
         <div class="middle-content container-xxl p-0">
 
             <div class="row layout-top-spacing">
-
+                @if (session()->has('errorMsg'))
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <strong>{{ Auth::guard('admin')->user()->name }} {{ session()->get('errorMsg') }}</strong>
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                @endif
                 <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 col-12 layout-spacing">
                     <div class="widget widget-six">
                         <div class="widget-heading">

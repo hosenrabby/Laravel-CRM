@@ -36,13 +36,13 @@
                                             <td>{{ $item->businessType }}</td>
                                             <td>{{ $item->lastStatus }}</td>
                                             <td>
-                                                <a href="{{ url('admin/customer/' . $item->id) }}" class="btn btn-info"><i
-                                                        class="fa-solid fa-magnifying-glass"></i></a>
+                                                <a href="{{ url('authorized/customer/' . $item->id) }}"
+                                                    class="btn btn-info"><i class="fa-solid fa-magnifying-glass"></i></a>
 
-                                                <a href="{{ url('admin/manageEditable-customer/' . $item->id) }}"
+                                                <a href="{{ url('authorized/manageEditable-customer/' . $item->id) }}"
                                                     class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i></a>
 
-                                                <a href="{{ url('admin/manageDelable-customer/' . $item->id) }}"
+                                                <a href="{{ url('authorized/manageDelable-customer/' . $item->id) }}"
                                                     class="btn btn-danger"><i class="fa-solid fa-trash-can"></i></a>
                                                 {{-- <form method="post" action="{{ url('admin/customer/' . $item->id) }}">
                                                     {{ method_field('DELETE') }}

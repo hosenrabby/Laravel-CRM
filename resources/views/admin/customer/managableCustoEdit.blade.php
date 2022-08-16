@@ -11,7 +11,7 @@
                     </div>
                 </div>
                 <div class="widget-content widget-content-area">
-                    <form class="forms-sample" action="{{ url('admin/managable-customer-update/' . $customer->id) }}"
+                    <form class="forms-sample" action="{{ url('authorized/managable-customer-update/' . $customer->id) }}"
                         method="POST">
                         {!! csrf_field() !!}
                         @method('PATCH')

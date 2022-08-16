@@ -7,7 +7,7 @@
                     <div class="card-body">
                         <h3 class="text-center text-success">All Customer Dealings</h3>
                         <div class="table-responsive">
-                            <a href="{{ url('admin/customerdealings/create') }}" class="btn btn-info mt-4">New Deals</a>
+                            <a href="{{ url('authorized/customerdealings/create') }}" class="btn btn-info mt-4">New Deals</a>
                             <table id="CRM_DATATABLE" class="table">
                                 <thead>
                                     <tr>
@@ -28,11 +28,11 @@
                                             <td>{{ $item->latestInformation }}</td>
                                             <td>{{ $item->created_at }}</td>
                                             <td>
-                                                <a href="{{ url('admin/customerdealings/' . $item->id . '/edit') }}"
+                                                <a href="{{ url('authorized/customerdealings/' . $item->id . '/edit') }}"
                                                     class="btn btn-info btn-sm"><i
                                                         class="fa-solid fa-pen-to-square"></i></a>
 
-                                                <form method="post" action="{{ url('admin/customer/' . $item->id) }}">
+                                                <form method="post" action="{{ url('authorized/customer/' . $item->id) }}">
                                                     {{ method_field('DELETE') }}
                                                     {{ csrf_field() }}
                                                     <button type="submit" class="btn btn-danger btn-sm"><i

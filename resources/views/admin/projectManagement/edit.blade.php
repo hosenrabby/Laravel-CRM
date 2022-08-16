@@ -6,7 +6,7 @@
         <div class="col-2"></div>
         <div class="col-8 mb-4">
             <h1 class="text-success ms-5 me-5 text-center"><strong>Keep your information</strong></h1>
-            <form action="{{ url('admin/projectManagement/' . $info->id) }}" method="post" class="form">
+            <form action="{{ url('authorized/projectManagement/' . $info->id) }}" method="post" class="form">
                 {!! csrf_field() !!}
                 @method('PATCH')
                 <input type="hidden" name="id" id="id" value="{{ $info->id }}" class="form-control"><br>

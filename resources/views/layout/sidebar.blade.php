@@ -6,12 +6,12 @@
         <div class="navbar-nav theme-brand flex-row  text-center">
             <div class="nav-logo">
                 <div class="nav-item theme-logo">
-                    <a href="{{ url('admin') }}">IsDB
+                    <a href="{{ route('admin-dashboard') }}">IsDB
                         {{-- <img src="{{ asset('public/src/assets/img/logo.svg') }}" class="navbar-logo" alt="logo"> --}}
                     </a>
                 </div>
                 <div class="nav-item theme-text">
-                    <a href="{{ url('admin') }}" class="nav-link"> CRM </a>
+                    <a href="{{ route('admin-dashboard') }}" class="nav-link"> CRM </a>
                 </div>
             </div>
             <div class="nav-item sidebar-toggle">
@@ -28,7 +28,7 @@
         <div class="shadow-bottom"></div>
         <ul class="list-unstyled menu-categories" id="accordionExample">
             <li class="menu active">
-                <a href="{{ url('admin') }}" aria-expanded="true" class="dropdown-toggle">
+                <a href="{{ route('admin-dashboard') }}" aria-expanded="true" class="dropdown-toggle">
                     <div class="">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                             fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -123,10 +123,10 @@
                 </a>
                 <ul class="collapse submenu list-unstyled" id="leeds" data-bs-parent="#accordionExample">
                     <li>
-                        <a href="{{ url('admin/customer/create') }}"> Create Leed </a>
+                        <a href="{{ url('authorized/customer/create') }}"> Create Leed </a>
                     </li>
                     <li>
-                        <a href="{{ url('admin/customer') }}"> All Leeds </a>
+                        <a href="{{ url('authorized/customer') }}"> All Leeds </a>
                     </li>
                 </ul>
             </li>
@@ -155,10 +155,10 @@
                 </a>
                 <ul class="collapse submenu list-unstyled" id="customer" data-bs-parent="#accordionExample">
                     <li>
-                        <a href="{{ url('admin/manage-customer') }}"> Manage Customer </a>
+                        <a href="{{ url('authorized/manage-customer') }}"> Manage Customer </a>
                     </li>
                     <li>
-                        <a href="{{ url('admin/customerdealings') }}"> Dealling Customer </a>
+                        <a href="{{ url('authorized/customerdealings') }}"> Dealling Customer </a>
                     </li>
                 </ul>
             </li>
@@ -190,13 +190,13 @@
                 </a>
                 <ul class="collapse submenu list-unstyled" id="prjct" data-bs-parent="#accordionExample">
                     <li>
-                        <a href="{{ url('admin/projectManagement/create') }}"> Create Project </a>
+                        <a href="{{ url('authorized/projectManagement/create') }}"> Create Project </a>
                     </li>
                     <li>
-                        <a href="{{ url('admin/projectManagement') }}"> Manage Project </a>
+                        <a href="{{ url('authorized/projectManagement') }}"> Manage Project </a>
                     </li>
                     <li>
-                        <a href="{{ url('admin/projectManagement') }}"> Stuff Assign </a>
+                        <a href="{{ url('authorized/projectManagement') }}"> Stuff Assign </a>
                     </li>
                 </ul>
             </li>
@@ -227,10 +227,10 @@
                 </a>
                 <ul class="collapse submenu list-unstyled" id="cullectM" data-bs-parent="#accordionExample">
                     <li>
-                        <a href="{{ url('admin/collectionManagement/create') }}"> Add Collection </a>
+                        <a href="{{ url('authorized/collectionManagement/create') }}"> Add Collection </a>
                     </li>
                     <li>
-                        <a href="{{ url('admin/collectionManagement') }}"> View Collection </a>
+                        <a href="{{ url('authorized/collectionManagement') }}"> View Collection </a>
                     </li>
                     <li>
                         <a href="#"> Collection Distribution </a>
@@ -264,19 +264,19 @@
                 </a>
                 <ul class="collapse submenu list-unstyled" id="stuffs" data-bs-parent="#accordionExample">
                     <li>
-                        <a href="{{ url('admin/stuffManagement') }}"> All Stuff </a>
+                        <a href="{{ url('authorized/stuffManagement') }}"> All Stuff </a>
                     </li>
                     <li>
-                        <a href="{{ url('admin/stuffManagement/create') }}"> Add Stuff </a>
+                        <a href="{{ url('authorized/stuffManagement/create') }}"> Add Stuff </a>
                     </li>
                     <li>
-                        <a href="./app-invoice-add.html"> Stuff Type </a>
+                        <a href="#"> Stuff Type </a>
                     </li>
                     <li>
-                        <a href="./app-invoice-edit.html"> Management </a>
+                        <a href="#"> Management </a>
                     </li>
                     <li>
-                        <a href="./app-invoice-edit.html"> Stuff Payment </a>
+                        <a href="#"> Stuff Payment </a>
                     </li>
                 </ul>
             </li>
@@ -307,10 +307,10 @@
                 </a>
                 <ul class="collapse submenu list-unstyled" id="stuffsAsn" data-bs-parent="#accordionExample">
                     <li>
-                        <a href="{{ url('admin/StuffAssignforProject/create') }}"> Assign Stuff </a>
+                        <a href="{{ url('authorized/StuffAssignforProject/create') }}"> Assign Stuff </a>
                     </li>
                     <li>
-                        <a href="{{ url('admin/StuffAssignforProject') }}"> View Assignable Stuff </a>
+                        <a href="{{ url('authorized/StuffAssignforProject') }}"> View Assignable Stuff </a>
                     </li>
                 </ul>
             </li>
@@ -341,10 +341,10 @@
                 </a>
                 <ul class="collapse submenu list-unstyled" id="stuffType" data-bs-parent="#accordionExample">
                     <li>
-                        <a href="{{ url('admin/stuffType/create') }}"> Add Stuff Type</a>
+                        <a href="{{ url('authorized/stuffType/create') }}"> Add Stuff Type</a>
                     </li>
                     <li>
-                        <a href="{{ url('admin/stuffType') }}"> Stuff Types</a>
+                        <a href="{{ url('authorized/stuffType') }}"> Stuff Types</a>
                     </li>
                 </ul>
             </li>
@@ -375,10 +375,10 @@
                 </a>
                 <ul class="collapse submenu list-unstyled" id="stuffTypeM" data-bs-parent="#accordionExample">
                     <li>
-                        <a href="{{ url('admin/stuffPaymentMgmt/create') }}"> Add Stuff Payment </a>
+                        <a href="{{ url('authorized/stuffPaymentMgmt/create') }}"> Add Stuff Payment </a>
                     </li>
                     <li>
-                        <a href="{{ url('admin/stuffPaymentMgmt') }}">View Stuffs Payment</a>
+                        <a href="{{ url('authorized/stuffPaymentMgmt') }}">View Stuffs Payment</a>
                     </li>
                 </ul>
             </li>
@@ -407,16 +407,16 @@
                 </a>
                 <ul class="collapse submenu list-unstyled" id="repo" data-bs-parent="#accordionExample">
                     <li>
-                        <a href="./app-invoice-list.html"> Customer Reports </a>
+                        <a href="#"> Customer Reports </a>
                     </li>
                     <li>
-                        <a href="./app-invoice-preview.html"> Project Reports </a>
+                        <a href="#"> Project Reports </a>
                     </li>
                     <li>
-                        <a href="./app-invoice-add.html"> Stuff Reports </a>
+                        <a href="#"> Stuff Reports </a>
                     </li>
                     <li>
-                        <a href="./app-invoice-add.html"> Payment Reports </a>
+                        <a href="#"> Payment Reports </a>
                     </li>
                 </ul>
             </li>
@@ -450,16 +450,16 @@
                 </a>
                 <ul class="collapse submenu list-unstyled" id="invoice" data-bs-parent="#accordionExample">
                     <li>
-                        <a href="./app-invoice-list.html"> List </a>
+                        <a href="#"> List </a>
                     </li>
                     <li>
-                        <a href="./app-invoice-preview.html"> Preview </a>
+                        <a href="#"> Preview </a>
                     </li>
                     <li>
-                        <a href="./app-invoice-add.html"> Add </a>
+                        <a href="#"> Add </a>
                     </li>
                     <li>
-                        <a href="./app-invoice-edit.html"> Edit </a>
+                        <a href="#"> Edit </a>
                     </li>
                 </ul>
             </li>

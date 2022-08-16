@@ -30,12 +30,12 @@
                                             <td>{{ $item->collectionDate }}</td>
                                             <td>{{ $item->collectionNote }}</td>
                                             <td>
-                                                <a href="{{ url('admin/collectionManagement/' . $item->id) }}"
+                                                <a href="{{ url('authorized/collectionManagement/' . $item->id) }}"
                                                     class="btn btn-info">Show</a>
-                                                <a href="{{ url('admin/collectionManagement/' . $item->id . '/edit') }}"
+                                                <a href="{{ url('authorized/collectionManagement/' . $item->id . '/edit') }}"
                                                     class="btn btn-success">Edit</a>
                                                 <form method="post"
-                                                    action="{{ url('admin/collectionManagement/' . $item->id) }}">
+                                                    action="{{ url('authorized/collectionManagement/' . $item->id) }}">
                                                     {{ method_field('DELETE') }}
                                                     {{ csrf_field() }}
                                                     <button type="submit" class="btn btn-danger">Delete</button>

@@ -11,7 +11,7 @@
                     </div>
                 </div>
                 <div class="widget-content widget-content-area">
-                    <form action="{{ url('admin/projectManagement') }}" method="post" class="form">
+                    <form action="{{ url('authorized/projectManagement') }}" method="post" class="form">
                         {!! csrf_field() !!}
                         <div class="row ms-2 me-2">
                             <div class="mb-3 col">

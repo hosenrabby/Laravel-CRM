@@ -12,7 +12,7 @@
                         </div>
                     </div>
                     <div class="widget-content widget-content-area">
-                        <form class="forms-sample" action="{{ route('admin.StuffAssignforProject.update', $info->id) }}"
+                        <form class="forms-sample" action="{{ route('authorized.StuffAssignforProject.update', $info->id) }}"
                             method="POST" enctype="multipart/form-data">
                             {!! csrf_field() !!}
                             @method('PATCH')

@@ -39,12 +39,12 @@
                                                 <td>{{ $item->projectLogo }}</td>
                                                 <td>{{ $item->projectStatus }}</td>
                                                 <td>
-                                                    <a href="{{ url('admin/projectManagement/' . $item->id) }}"
+                                                    <a href="{{ url('authorized/projectManagement/' . $item->id) }}"
                                                         class="btn btn-info">Show</a>
-                                                    <a href="{{ url('admin/projectManagement/' . $item->id . '/edit') }}"
+                                                    <a href="{{ url('authorized/projectManagement/' . $item->id . '/edit') }}"
                                                         class="btn btn-success">Edit</a>
                                                     <form method="post"
-                                                        action="{{ url('admin/projectManagement/' . $item->id) }}">
+                                                        action="{{ url('authorized/projectManagement/' . $item->id) }}">
                                                         {{ method_field('DELETE') }}
                                                         {{ csrf_field() }}
                                                         <button type="submit" class="btn btn-danger">Delete</button>
