@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\adminController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\adminController;
 use App\Http\Controllers\CustomerController;
 use App\Http\Controllers\StuffPaymentController;
 use App\Http\Controllers\StuffTypeMngController;
@@ -23,16 +23,7 @@ use App\Http\Controllers\StuffAssignforProjectController;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
-
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
-
-require __DIR__.'/auth.php';
-/*========================= Admin Authenticate Routs =================================*/
+Route::get('/',[adminController::class , 'dashboard'])->middleware('admin');
 
 Route::group(['prefix' => 'authorized' ], function (){
     Route::get('/login-to-go', [adminController::class , 'index'])->name('login-to-go');
