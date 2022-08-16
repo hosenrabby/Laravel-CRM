@@ -19,7 +19,7 @@
                             @error('stuffName') is-invalid @enderror"
                                 value="{{ $spmedit->stuffName }}"><br>
                             <label class="control-label">Payment Amount</label><br>
-                            <input type="text" name="paymentAmount" id="paymentAmount"
+                            <input type="number" name="paymentAmount" id="paymentAmount"
                                 class="form-control
                             @error('paymentAmount') is-invalid @enderror"
                                 value="{{ $spmedit->paymentAmount }}"><br>

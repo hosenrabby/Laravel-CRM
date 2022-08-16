@@ -21,10 +21,10 @@
 
                                 <tr>
 
-                                    <td>{{ $info->id }}</td>
-                                    <td>{{ $info->Projectid }}</td>
-                                    <td>{{ $info->Stuffid }}</td>
-                                    <td>{{ $info->WorkingCommission }}</td>
+                                    <td>{{ $stuffAssign->id }}</td>
+                                    <td>{{ $stuffAssign->Projectid }}</td>
+                                    <td>{{ $stuffAssign->Stuffid }}</td>
+                                    <td>{{ $stuffAssign->WorkingCommission }}</td>
 
 
                                 </tr>
