@@ -33,7 +33,7 @@ class CustomerDeallingController extends Controller
     {
         $input = $request->all();
         customer_dealling::create($input);
-        return redirect('admin/customerdealings')->with('flash_message' , 'New Schidule set..');
+        return redirect('authorized/customerdealings')->with('flash_message' , 'New Schidule set..');
     }
 
     public function show(customer_dealling $customer_dealling)
@@ -66,7 +66,7 @@ class CustomerDeallingController extends Controller
     {
         $input = $request->all();
         customer_dealling::create($input);
-        return redirect('admin/customerdealings')->with('flash_message' , 'New Schidule set..');
+        return redirect('authorized/customerdealings')->with('flash_message' , 'New Schidule set..');
     }
 
     /**

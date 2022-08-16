@@ -26,7 +26,7 @@ class ProjectManagementController extends Controller
     {
         $data = $request->all();
         projectManagement::create($data);
-        return redirect('admin/projectManagement')->with('Flass_message','Data Inserted');
+        return redirect('authorized/projectManagement')->with('Flass_message','Data Inserted');
     }
 
     
@@ -52,7 +52,7 @@ class ProjectManagementController extends Controller
         $data = projectManagement::find($id);
         $input = $request->all();
         $data->update($input);
-        return redirect('admin/projectManagement')->with('flash_message', 'Data Update');
+        return redirect('authorized/projectManagement')->with('flash_message', 'Data Update');
     }
 
    
@@ -60,6 +60,6 @@ class ProjectManagementController extends Controller
     public function destroy($id)
     {
         projectManagement::destroy($id);
-        return redirect('admin/projectManagement');
+        return redirect('authorized/projectManagement');
     }
 }

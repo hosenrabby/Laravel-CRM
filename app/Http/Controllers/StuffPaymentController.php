@@ -29,7 +29,7 @@ class StuffPaymentController extends Controller
     {
         $input=$request->all();
         stuff_payment::create($input);
-        return redirect('admin/stuffPaymentMgmt')->with('flash-message', 'Stuff Added');
+        return redirect('authorized/stuffPaymentMgmt')->with('flash-message', 'Stuff Added');
     }
 
     public function show($id)
@@ -51,13 +51,13 @@ class StuffPaymentController extends Controller
         $stuff=stuff_payment::find($id);
         $input=$request->all();
         $stuff->update($input);
-        return redirect('admin/stuffPaymentMgmt')->with('flash-message', 'Stuff updated');
+        return redirect('authorized/stuffPaymentMgmt')->with('flash-message', 'Stuff updated');
     }
 
 
     public function destroy($id)
     {
         stuff_payment::destroy($id);
-        return redirect('admin/stuffPaymentMgmt')->with('flash-message', 'stuff deleted');
+        return redirect('authorized/stuffPaymentMgmt')->with('flash-message', 'stuff deleted');
     }
 }

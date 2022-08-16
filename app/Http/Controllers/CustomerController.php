@@ -26,7 +26,7 @@ class CustomerController extends Controller
         $input= $request->all();
 
         customer::create($input);
-        return redirect('admin/customer')->with('flash_message','customer Added');
+        return redirect('authorized/customer')->with('flash_message','customer Added');
     }
 
     public function show( $id)
@@ -47,12 +47,12 @@ class CustomerController extends Controller
         $customer = customer::find($id);
         $input = $request->all();
         $customer->update($input);
-        return redirect('admin/customer')->with('flash_message', 'Customer Updated!');
+        return redirect('authorized/customer')->with('flash_message', 'Customer Updated!');
     }
 
     public function destroy($id)
     {
         customer::destroy($id);
-        return redirect('admin/customer')->with('flash_message', 'customer deleted!');
+        return redirect('authorized/customer')->with('flash_message', 'customer deleted!');
     }
 }

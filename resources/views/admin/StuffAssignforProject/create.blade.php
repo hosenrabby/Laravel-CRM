@@ -18,7 +18,7 @@
                             <div class="mb-3 col">
                                 <label for="Projectid" class="form-label">Project Name</label>
                                 <select class="form-select" name="stuffTypeId">
-                                    <option selected>Select Stuff</option>
+                                    <option selected>Select Project</option>
                                     @foreach ($stufAssign as $item)
                                         <option value="{{ $item->id }}">{{ $item->projectName }}</option>
                                     @endforeach

@@ -29,7 +29,7 @@ class StuffManagementModelController extends Controller
     {
         $input=$request->all();
         stuffManagementModel::create($input);
-        return redirect('admin/stuffManagement')->with('flash-message', 'Stuff Added');
+        return redirect('authorized/stuffManagement')->with('flash-message', 'Stuff Added');
     }
 
 
@@ -50,13 +50,13 @@ class StuffManagementModelController extends Controller
         $stuff=stuffManagementModel::find($id);
         $input=$request->all();
         $stuff->update($input);
-        return redirect('admin/stuffManagement')->with('flash-message', 'Stuff updated');
+        return redirect('authorized/stuffManagement')->with('flash-message', 'Stuff updated');
     }
 
 
     public function destroy($id)
     {
         stuffManagementModel::destroy($id);
-        return redirect('admin/stuffManagement')->with('flash-message', 'stuff deleted');
+        return redirect('authorized/stuffManagement')->with('flash-message', 'stuff deleted');
     }
 }

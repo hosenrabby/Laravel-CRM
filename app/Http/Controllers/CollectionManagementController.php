@@ -24,7 +24,7 @@ class CollectionManagementController extends Controller
         $input= $request->all();
 
         collectionManagement::create($input);
-        return redirect('admin/collectionManagement')->with('flash_message','collection Added');
+        return redirect('authorized/collectionManagement')->with('flash_message','collection Added');
     }
 
     public function show( $id)
@@ -44,12 +44,12 @@ class CollectionManagementController extends Controller
         $collection = collectionManagement::find($id);
         $input = $request->all();
         $collection->update($input);
-        return redirect('admin/collectionManagement')->with('flash_message', 'Collection Updated!');
+        return redirect('authorized/collectionManagement')->with('flash_message', 'Collection Updated!');
     }
 
     public function destroy($id)
     {
         collectionManagement::destroy($id);
-        return redirect('admin/collectionManagement')->with('flash_message', 'Collection deleted!');
+        return redirect('authorized/collectionManagement')->with('flash_message', 'Collection deleted!');
     }
 }

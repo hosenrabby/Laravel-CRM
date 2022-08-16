@@ -79,7 +79,7 @@ class StuffTypeMngController extends Controller
         $stuffType = stuff_type_mng::find($id);
         $input = $request->all();
         $stuffType->update($input);
-        return redirect('admin/stuffType')->with('flash_message', 'stuffType Updated!');
+        return redirect('authorized/stuffType')->with('flash_message', 'stuffType Updated!');
     }
 
     /**
@@ -91,6 +91,6 @@ class StuffTypeMngController extends Controller
     public function destroy($id)
     {
         stuff_type_mng::destroy($id);
-        return redirect('admin/stuffType')->with('flash_message', 'stuffType deleted!');
+        return redirect('authorized/stuffType')->with('flash_message', 'stuffType deleted!');
     }
 }

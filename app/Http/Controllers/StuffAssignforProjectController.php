@@ -1,12 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-use App\Models\projectManagement;
-use App\Models\stuffManagementModel;
-use App\Http\Controllers\Controller;
-use Illuminate\Support\Facades\DB;
-
 use Illuminate\Http\Request;
+use App\Models\projectManagement;
+use Illuminate\Support\Facades\DB;
+use App\Http\Controllers\Controller;
+use App\Models\stuffManagementModel;
+use App\Models\StuffAssignforProject;
 
 class StuffAssignforProjectController extends Controller
 {
@@ -31,7 +31,7 @@ class StuffAssignforProjectController extends Controller
     {
         $store = $request->all();
         StuffAssignforProject::create($store);
-        return redirect('admin/StuffAssignforProject')->with('info', $store);
+        return redirect('authorized/StuffAssignforProject')->with('info', $store);
     }
 
    
@@ -52,7 +52,7 @@ class StuffAssignforProjectController extends Controller
     public function update(Request $request, StuffAssignforProject $StuffAssignforProject)
     {
         $StuffAssignforProject->update($request->all());
-        return redirect('admin/StuffAssignforProject')->with('flash-message', 'Stuff updated');
+        return redirect('authorized/StuffAssignforProject')->with('flash-message', 'Stuff updated');
     }
 
     public function destroy($id)
